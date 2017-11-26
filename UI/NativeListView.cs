@@ -110,6 +110,18 @@ namespace UI
             ApplyDataSourceFilter(null);
         }
 
+        public void ApplyDataSource(IEnumerable<string[]> rows)
+        {
+            listViewItems.Clear();
+
+            foreach (var row in rows)
+            {
+                listViewItems.Add(new ListViewItem(row));                
+            }
+
+            ApplyDataSourceFilter(null);
+        }
+
         public void ApplyDataSourceFilter(string filter)
         {
             if (string.IsNullOrEmpty(filter) || string.IsNullOrWhiteSpace(filter))
