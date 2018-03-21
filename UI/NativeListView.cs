@@ -37,8 +37,7 @@ namespace UI
 
             int compare;
 
-            double num1, num2;
-            bool intParsed = double.TryParse(text1, out num1) & double.TryParse(text2, out num2);
+            bool intParsed = double.TryParse(text1, out double num1) & double.TryParse(text2, out double num2);
 
             if (intParsed)
             {
@@ -46,8 +45,7 @@ namespace UI
             }
             else
             {
-                DateTime d1, d2;
-                bool dateParsed = DateTime.TryParse(text1, out d1) & DateTime.TryParse(text2, out d2);
+                bool dateParsed = DateTime.TryParse(text1, out DateTime d1) & DateTime.TryParse(text2, out DateTime d2);
 
                 if (dateParsed)
                 {
@@ -84,6 +82,7 @@ namespace UI
         public void ApplyDataSource(DataTable table)
         {
             listViewItems.Clear();
+            Columns.Clear();
 
             foreach (DataColumn col in table.Columns)
             {

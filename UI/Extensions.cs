@@ -32,6 +32,17 @@ namespace UI
             }
         }
 
+        public static void CreateTabPageForm(this TabControl tab, Form f)
+        {
+            f.TopLevel = false;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.Visible = true;
+            f.Dock = DockStyle.Fill;
+
+            tab.TabPages.Add(f.Text);
+            tab.TabPages[tab.TabPages.Count - 1].Controls.Add(f);
+        }
+
         public static IEnumerable<ListViewItem> ToListViewItem(this DataTable table)
         {
             foreach (DataRow row in table.Rows)

@@ -1,6 +1,6 @@
 ﻿namespace UIDemo
 {
-    partial class Form1
+    partial class Grid
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.searchDataGrid1 = new UI.SearchDataGrid();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // searchDataGrid1
             // 
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(661, 443);
-            this.tabControl1.TabIndex = 0;
+            this.searchDataGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchDataGrid1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.searchDataGrid1.Location = new System.Drawing.Point(0, 0);
+            this.searchDataGrid1.Name = "searchDataGrid1";
+            this.searchDataGrid1.Size = new System.Drawing.Size(764, 419);
+            this.searchDataGrid1.TabIndex = 0;
             // 
-            // Form1
+            // Grid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(661, 443);
-            this.Controls.Add(this.tabControl1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(764, 419);
+            this.Controls.Add(this.searchDataGrid1);
+            this.Name = "Grid";
+            this.Text = "Grid";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        public UI.SearchDataGrid searchDataGrid1;
     }
 }

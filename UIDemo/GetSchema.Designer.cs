@@ -1,6 +1,6 @@
 ﻿namespace UIDemo
 {
-    partial class Form1
+    partial class GetSchema
     {
         /// <summary>
         /// Required designer variable.
@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.searchListView1 = new UI.SearchListView();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // searchListView1
             // 
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(661, 443);
-            this.tabControl1.TabIndex = 0;
+            this.searchListView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchListView1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.searchListView1.Location = new System.Drawing.Point(0, 0);
+            this.searchListView1.Name = "searchListView1";
+            this.searchListView1.Size = new System.Drawing.Size(690, 487);
+            this.searchListView1.TabIndex = 0;
             // 
-            // Form1
+            // GetSchema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(661, 443);
-            this.Controls.Add(this.tabControl1);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(690, 487);
+            this.Controls.Add(this.searchListView1);
+            this.Name = "GetSchema";
             this.Text = "Form1";
             this.ResumeLayout(false);
 
@@ -54,6 +54,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        public UI.SearchListView searchListView1;
     }
 }
+

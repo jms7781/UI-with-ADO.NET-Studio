@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EED174D1-D538-4775-93BB-61BD36F7C02E}</ProjectGuid>
+    <ProjectGuid>{282CDCF1-0BE7-4B16-9256-41777F2C96BD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>UIDemo</RootNamespace>
-    <AssemblyName>UIDemo</AssemblyName>
+    <RootNamespace>Export_Admin</RootNamespace>
+    <AssemblyName>Export Admin</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,13 +31,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>UIDemo.Program</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DataAccessWrapper">
-      <HintPath>..\DataAccessWrapper.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -57,28 +51,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="GetSchema.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GetSchema.Designer.cs">
-      <DependentUpon>GetSchema.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Grid.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Grid.Designer.cs">
-      <DependentUpon>Grid.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GetSchema.resx">
-      <DependentUpon>GetSchema.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Grid.resx">
-      <DependentUpon>Grid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -104,7 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UI\UI.csproj">
-      <Project>{45BECA24-98E7-4E19-8169-C62F14708565}</Project>
+      <Project>{45beca24-98e7-4e19-8169-c62f14708565}</Project>
       <Name>UI</Name>
     </ProjectReference>
   </ItemGroup>
