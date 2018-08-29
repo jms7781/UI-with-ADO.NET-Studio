@@ -20,7 +20,7 @@ namespace UI
             this.Font = SystemFonts.MessageBoxFont;
             InitializeComponent();
 
-            //this.DataGrid.SetDoubleBuffered();
+            this.DataGrid.SetDoubleBuffered();
 
             searchCue = SearchText.Text;
             searchTextDefault = SearchText;
@@ -48,9 +48,8 @@ namespace UI
 
             bs.DataSource = table;
             DataGrid.DataSource = bs;
-            DataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            //DataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            //DataGrid.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            DataGrid.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+
             this.toolStripLabel1.Text = $"{DataGrid.Rows.Count} rows";
         }
 

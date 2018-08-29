@@ -112,5 +112,40 @@ namespace UI
             }
 
         }
+
+        /// <summary>
+        /// Performs a pivot on a DataTable. The column names will be the first entry in each row. Each column represents the row number.
+        /// </summary>
+        /// <param name="table"></param>
+        /// <returns></returns>
+        public static DataTable Pivot(this DataTable table)
+        {
+            var pivot = new DataTable(table.TableName);
+            var colNames = table.Columns.Cast<DataColumn>().OrderBy(o => o.Ordinal);
+
+            //create columns
+            pivot.Columns.Add("Column Name");
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                pivot.Columns.Add("Row " + (i + 1).ToString());
+            }
+
+            //add rows
+            foreach (var col in colNames)
+            {
+                var row = pivot.NewRow();
+                row[0] = col;
+
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    var ix = i + 1;
+                    row[ix] = table.Rows[i][col];
+                }
+
+                pivot.Rows.Add(row);
+            }
+
+            return pivot;
+        }
     }
 }
