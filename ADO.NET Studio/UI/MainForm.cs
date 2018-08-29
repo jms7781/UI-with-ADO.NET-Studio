@@ -20,7 +20,7 @@ namespace ADO.NET_Studio
 
         private void btnNewConnection_Click(object sender, EventArgs e)
         {
-            var f = new NewConnectionUI(this);
+            var f = new OpenConnectionUI(this);
             //f.StartPosition = FormStartPosition.CenterParent;
             f.Show();
         }

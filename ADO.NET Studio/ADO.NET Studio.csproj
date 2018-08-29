@@ -78,6 +78,7 @@
   <ItemGroup>
     <Compile Include="ConnectionDetail.cs" />
     <Compile Include="DataAccessWrapper.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +90,12 @@
     </Compile>
     <Compile Include="UI\Object Browser.Designer.cs">
       <DependentUpon>Object Browser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\OpenConnectionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\OpenConnectionUI.Designer.cs">
+      <DependentUpon>OpenConnectionUI.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\QueryUI.cs">
       <SubType>Form</SubType>
@@ -139,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Object Browser.resx">
       <DependentUpon>Object Browser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\OpenConnectionUI.resx">
+      <DependentUpon>OpenConnectionUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\QueryUI.resx">
       <DependentUpon>QueryUI.cs</DependentUpon>
