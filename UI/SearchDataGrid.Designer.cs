@@ -211,6 +211,7 @@
             this.DataGrid.ReadOnly = true;
             this.DataGrid.Size = new System.Drawing.Size(358, 40);
             this.DataGrid.TabIndex = 1;
+            this.DataGrid.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.DataGrid_DataError);
             // 
             // SearchDataGrid
             // 

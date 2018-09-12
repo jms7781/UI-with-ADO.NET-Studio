@@ -82,6 +82,46 @@ namespace UI
                     }
                     
                 }
+                else if (
+                    col.ValueType == typeof(int) || 
+                    col.ValueType == typeof(decimal) || 
+                    col.ValueType == typeof(float) ||
+                    col.ValueType == typeof(double) || 
+                    col.ValueType == typeof(long) ||
+                    col.ValueType == typeof(short) ||
+                    col.ValueType == typeof(uint) ||
+                    col.ValueType == typeof(ulong) ||
+                    col.ValueType == typeof(ushort) ||
+                    col.ValueType == typeof(DateTimeOffset) ||
+                    col.ValueType == typeof(DateTime)
+                )
+                {
+                    switch (FilterOption.SelectedItem.ToString().ToLowerInvariant())
+                    {
+                        case "starts with":
+                            //criteria.Add($"[{col.DataPropertyName}] LIKE '{search}%'");
+                            criteria.Add($"convert({col.DataPropertyName}, 'System.String') LIKE '{search}%'");
+                            break;
+                        case "ends with":
+                            //criteria.Add($"[{col.DataPropertyName}] LIKE '%{search}'");
+                            criteria.Add($"convert({col.DataPropertyName}, 'System.String') LIKE '%{search}'");
+
+                            break;
+                        case "contains":
+                            //criteria.Add($"[{col.DataPropertyName}] LIKE '%{search}%'");
+                            criteria.Add($"convert({col.DataPropertyName}, 'System.String') LIKE '%{search}%'");
+                            break;
+                        case "equals":
+                            //criteria.Add($"[{col.DataPropertyName}] = '{search}'");
+                            criteria.Add($"convert({col.DataPropertyName}, 'System.String') = {search}");
+                            break;
+                    }
+                }
+                else
+                {
+                    var x = col.ValueType;
+                   
+                }
             }
 
             return string.Join(" OR ", criteria.ToArray());
@@ -143,6 +183,11 @@ namespace UI
         private void FilterOption_SelectedIndexChanged(object sender, EventArgs e)
         {
             QuickFilter();
+        }
+
+        private void DataGrid_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.Cancel = true;
         }
     }
 }

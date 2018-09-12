@@ -64,7 +64,7 @@ namespace ADO.NET_Studio
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            var f = new QueryUI();
+            var f = new QueryUI(_cnn);
             f.Text = "Query Editor";
             OpenAsTab(f);
         }

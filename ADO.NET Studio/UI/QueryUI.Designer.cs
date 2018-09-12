@@ -68,6 +68,7 @@
             this.btnExecute.Name = "btnExecute";
             this.btnExecute.Size = new System.Drawing.Size(74, 22);
             this.btnExecute.Text = "Execute (F5)";
+            this.btnExecute.Click += new System.EventHandler(this.btnExecute_Click);
             // 
             // btnToggleResults
             // 

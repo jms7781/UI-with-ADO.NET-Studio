@@ -79,25 +79,24 @@ namespace ADO.NET_Studio
 
             var isExecute = tokens.Any(t => sql.StartsWith(t, StringComparison.InvariantCultureIgnoreCase));
 
-            using (var cnn = new System.Data.SqlClient.SqlConnection(""))
+            try
             {
-                var cmd = cnn.CreateCommand();
-                cmd.CommandText = sql;
-
                 if (isExecute)
                 {
-                    cmd.ExecuteNonQuery();
+                    this.Connection.DataConnection.Execute(sql);
                 }
                 else
                 {
-                    var t = new DataTable();
-                    t.Load(cmd.ExecuteReader());
-
+                    var t = this.Connection.DataConnection.QueryDataTable(sql);
+                    ResultsGrid.ApplyDataTale(t);
+                    
                 }
-                
-
-
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            
 
 
             //apply datatable to datagrid
@@ -111,7 +110,12 @@ namespace ADO.NET_Studio
 
         private void DataConnection_CommandExecuted(object sender, System.Data.Common.DbCommand e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+        }
+
+        private void btnExecute_Click(object sender, EventArgs e)
+        {
+            Execute();
         }
     }
 }

@@ -125,7 +125,17 @@ namespace ADO.NET_Studio
         private DataTable QueryDataTableInternal(DbCommand command)
         {
             var t = new DataTable();
-            t.Load(QueryDataReaderInternal(command));
+            using (var cnn = Connection)
+            using (command)
+            {
+                command.Connection = cnn;
+                cnn.Open();
+
+                var reader = command.ExecuteReader();
+                OnCommandExecuted(command);
+                t.Load(reader);
+            }
+
             return t;
         }
 
@@ -579,5 +589,6 @@ namespace ADO.NET_Studio
         {
             get { return this.GetSchema("MetaDataCollections"); }
         }
+
     }
 }
