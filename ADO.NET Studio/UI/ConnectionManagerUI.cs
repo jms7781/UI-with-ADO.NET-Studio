@@ -93,6 +93,10 @@ namespace ADO.NET_Studio
 
             var lvi = nativeListView1.SelectedItems[0];
 
+            var result = MessageBox.Show($"Are you sure you want to delete '{lvi.Text}'?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (result != DialogResult.OK) return;
+
             var config = new AppConfigWrapper();
             config.DeleteConnectionString(lvi.Text);
 

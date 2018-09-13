@@ -52,10 +52,11 @@
             // 
             this.cboProvider.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboProvider.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProvider.FormattingEnabled = true;
             this.cboProvider.Location = new System.Drawing.Point(124, 41);
             this.cboProvider.Name = "cboProvider";
-            this.cboProvider.Size = new System.Drawing.Size(435, 23);
+            this.cboProvider.Size = new System.Drawing.Size(371, 23);
             this.cboProvider.TabIndex = 1;
             // 
             // label2
@@ -73,7 +74,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtName.Location = new System.Drawing.Point(124, 12);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(435, 23);
+            this.txtName.Size = new System.Drawing.Size(371, 23);
             this.txtName.TabIndex = 0;
             // 
             // label3
@@ -87,19 +88,21 @@
             // 
             // txtCS
             // 
-            this.txtCS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtCS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCS.Location = new System.Drawing.Point(15, 91);
             this.txtCS.Multiline = true;
             this.txtCS.Name = "txtCS";
-            this.txtCS.Size = new System.Drawing.Size(544, 97);
+            this.txtCS.Size = new System.Drawing.Size(480, 98);
             this.txtCS.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(466, 194);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(402, 195);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 35);
+            this.button1.Size = new System.Drawing.Size(93, 30);
             this.button1.TabIndex = 4;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = true;
@@ -107,10 +110,10 @@
             // 
             // btnSave
             // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSave.Location = new System.Drawing.Point(367, 194);
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.Location = new System.Drawing.Point(299, 195);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(93, 35);
+            this.btnSave.Size = new System.Drawing.Size(93, 30);
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -119,9 +122,9 @@
             // btnTest
             // 
             this.btnTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnTest.Location = new System.Drawing.Point(15, 194);
+            this.btnTest.Location = new System.Drawing.Point(15, 195);
             this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(93, 35);
+            this.btnTest.Size = new System.Drawing.Size(93, 30);
             this.btnTest.TabIndex = 5;
             this.btnTest.Text = "Test";
             this.btnTest.UseVisualStyleBackColor = true;
@@ -131,7 +134,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 241);
+            this.ClientSize = new System.Drawing.Size(507, 237);
             this.Controls.Add(this.btnTest);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.button1);
