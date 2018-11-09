@@ -32,10 +32,10 @@ namespace ADO.NET_Studio
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnNewConnection = new System.Windows.Forms.ToolStripButton();
-            this.ConnectionTree = new UI.NativeTreeView();
+            this.btnConnectionManager = new System.Windows.Forms.ToolStripButton();
             this.MdiTab = new MdiTabControl.TabControl();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.ConnectionTree = new UI.NativeTreeView();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,30 +43,22 @@ namespace ADO.NET_Studio
             // 
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnNewConnection});
+            this.btnConnectionManager});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1161, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // btnNewConnection
+            // btnConnectionManager
             // 
-            this.btnNewConnection.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnNewConnection.Image = ((System.Drawing.Image)(resources.GetObject("btnNewConnection.Image")));
-            this.btnNewConnection.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnNewConnection.Name = "btnNewConnection";
-            this.btnNewConnection.Size = new System.Drawing.Size(109, 22);
-            this.btnNewConnection.Text = "New Connection...";
-            this.btnNewConnection.Click += new System.EventHandler(this.btnNewConnection_Click);
-            // 
-            // ConnectionTree
-            // 
-            this.ConnectionTree.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ConnectionTree.Location = new System.Drawing.Point(0, 0);
-            this.ConnectionTree.Name = "ConnectionTree";
-            this.ConnectionTree.Size = new System.Drawing.Size(387, 572);
-            this.ConnectionTree.TabIndex = 0;
+            this.btnConnectionManager.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnConnectionManager.Image = ((System.Drawing.Image)(resources.GetObject("btnConnectionManager.Image")));
+            this.btnConnectionManager.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnConnectionManager.Name = "btnConnectionManager";
+            this.btnConnectionManager.Size = new System.Drawing.Size(132, 22);
+            this.btnConnectionManager.Text = "Connection Manager...";
+            this.btnConnectionManager.Click += new System.EventHandler(this.btnNewConnection_Click);
             // 
             // MdiTab
             // 
@@ -91,6 +83,15 @@ namespace ADO.NET_Studio
             this.tabControl1.TabIndex = 3;
             this.tabControl1.Visible = false;
             // 
+            // ConnectionTree
+            // 
+            this.ConnectionTree.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ConnectionTree.LineColor = System.Drawing.Color.Empty;
+            this.ConnectionTree.Location = new System.Drawing.Point(0, 0);
+            this.ConnectionTree.Name = "ConnectionTree";
+            this.ConnectionTree.Size = new System.Drawing.Size(387, 572);
+            this.ConnectionTree.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -104,6 +105,7 @@ namespace ADO.NET_Studio
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ADO.NET Studio";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -115,7 +117,7 @@ namespace ADO.NET_Studio
         private System.Windows.Forms.ToolStrip toolStrip1;
         private NativeTreeView ConnectionTree;
         public MdiTabControl.TabControl MdiTab;
-        public System.Windows.Forms.ToolStripButton btnNewConnection;
+        public System.Windows.Forms.ToolStripButton btnConnectionManager;
         public System.Windows.Forms.TabControl tabControl1;
     }
 }

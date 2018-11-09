@@ -22,6 +22,12 @@ namespace ADO.NET_Studio
             //read connection strings from app.settings
 
             RefreshListView();
+
+            var h = Screen.PrimaryScreen.WorkingArea.Height / 2;
+            var w = Screen.PrimaryScreen.WorkingArea.Width / 2;
+
+            this.Height = h;
+            this.Width = w;
         }
 
         public void RefreshListView()
@@ -144,6 +150,11 @@ namespace ADO.NET_Studio
             var lvi = nativeListView1.SelectedItems[0];
 
             (OpenConnectionManagerUI(lvi.Text + " - Copy", lvi.SubItems[1].Text, lvi.SubItems[2].Text)).Show();
+        }
+
+        private void ConnectionManagerUI_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

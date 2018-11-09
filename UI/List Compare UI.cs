@@ -7,21 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DataAccessWrapper;
-using System.Data.SqlClient;
 
-namespace UIDemo
+namespace UI
 {
-    public partial class GetSchema : Form
+    public partial class ListCompareUI : Form
     {
-        
-
-
-        public GetSchema()
+        public ListCompareUI()
         {
             InitializeComponent();
-            
+        }
 
+        private void btnCompare_Click(object sender, EventArgs e)
+        {
             
         }
     }

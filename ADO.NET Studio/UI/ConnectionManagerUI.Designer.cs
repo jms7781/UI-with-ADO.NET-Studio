@@ -39,12 +39,12 @@
             this.btnTest = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnOpen = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnCopy = new System.Windows.Forms.ToolStripButton();
             this.nativeListView1 = new UI.NativeListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnCopy = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,6 +138,21 @@
             this.btnOpen.Size = new System.Drawing.Size(40, 22);
             this.btnOpen.Text = "Open";
             // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btnCopy
+            // 
+            this.btnCopy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnCopy.Image = ((System.Drawing.Image)(resources.GetObject("btnCopy.Image")));
+            this.btnCopy.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCopy.Name = "btnCopy";
+            this.btnCopy.Size = new System.Drawing.Size(39, 22);
+            this.btnCopy.Text = "Copy";
+            this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
+            // 
             // nativeListView1
             // 
             this.nativeListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -170,21 +185,6 @@
             this.columnHeader3.Text = "Connection String";
             this.columnHeader3.Width = 431;
             // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
-            // 
-            // btnCopy
-            // 
-            this.btnCopy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnCopy.Image = ((System.Drawing.Image)(resources.GetObject("btnCopy.Image")));
-            this.btnCopy.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCopy.Name = "btnCopy";
-            this.btnCopy.Size = new System.Drawing.Size(39, 22);
-            this.btnCopy.Text = "Copy";
-            this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
-            // 
             // ConnectionManagerUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -196,6 +196,7 @@
             this.Name = "ConnectionManagerUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Connection Manager";
+            this.Load += new System.EventHandler(this.ConnectionManagerUI_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

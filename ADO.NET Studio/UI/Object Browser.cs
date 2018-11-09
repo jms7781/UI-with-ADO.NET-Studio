@@ -18,36 +18,64 @@ namespace ADO.NET_Studio
             InitializeComponent();
         }
 
+        private void LoadSchema()
+        {
+            nativeTreeView1.Nodes.Clear();
+
+            //root node
+            var root = nativeTreeView1.Nodes.Add(_cnn.DataConnection.Connection.DataSource);
+
+            var schemas = _cnn.DataConnection.GetSchema().AsEnumerable().Select(r => r[0].ToString()).ToList();
+
+            //schemas
+            foreach (var schema in schemas)
+            {
+                var node = root.Nodes.Add(schema);
+
+                var results = _cnn.DataConnection.GetSchema(schema);
+
+                foreach (DataRow row in results.Rows)
+                {
+                    node.Nodes.Add(row[0].ToString());
+                    System.Diagnostics.Debug.Print(row.ToString());
+                }
+            }
+
+
+        }
+
         private ConnectionDetail _cnn;
         public ObjectBrowserUI(ConnectionDetail connectionDetail) : this()
         {
             _cnn = connectionDetail;
 
-            //load tree
+            LoadSchema();
 
-            TableNode.Nodes.Clear();
-            ViewNode.Nodes.Clear();
+            ////load tree
 
-            var tables = _cnn.Tables.AsEnumerable()
-                        .Where(r => r["table_type"].ToString() == "BASE TABLE")
-                        .Select(s => s["table_schema"].ToString() + "." + s["table_name"].ToString())
-                        .OrderBy(o => o);
+            //TableNode.Nodes.Clear();
+            //ViewNode.Nodes.Clear();
 
-            var views = _cnn.Tables.AsEnumerable()
-                        .Where(r => r["table_type"].ToString() == "VIEW")
-                        .Select(s => s["table_schema"].ToString() + "." + s["table_name"].ToString())
-                        .OrderBy(o => o);
+            //var tables = _cnn.Tables.AsEnumerable()
+            //            .Where(r => r["table_type"].ToString() == "BASE TABLE")
+            //            .Select(s => s["table_schema"].ToString() + "." + s["table_name"].ToString())
+            //            .OrderBy(o => o);
+
+            //var views = _cnn.Tables.AsEnumerable()
+            //            .Where(r => r["table_type"].ToString() == "VIEW")
+            //            .Select(s => s["table_schema"].ToString() + "." + s["table_name"].ToString())
+            //            .OrderBy(o => o);
 
 
-            foreach (var table in tables)
-            {
-                TableNode.Nodes.Add(table);
-            }
+            //foreach (var table in tables)
+            //{
+            //    TableNode.Nodes.Add(table);
+            //}
 
-            foreach (var view in views)
-            {
-                ViewNode.Nodes.Add(view);
-            }
+            //foreach (var view in views)
+            //{
+            //    ViewNode.Nodes.Add(view);
+            //}
         }
 
         private TreeNode TableNode
@@ -97,17 +125,23 @@ namespace ADO.NET_Studio
             {
                 if (args.TabPage.Name == "DataTab")
                 {
+                    var adapter = _cnn.DataConnection.QueryDataAdapter($"select * from {tableSchema}.{tableName}");
+                    
+                    td.DataGrid.ApplyDataAdapter(adapter);
 
-                    using (var cnn = _cnn.DataConnection.Connection)
-                    using (var cmd = cnn.CreateCommand())
-                    {
-                        cmd.CommandText = $"select * from {tableSchema}.{tableName}";
-                        cnn.Open();
+                    //using (var cnn = _cnn.DataConnection.Connection)
+                    //using (var cmd = cnn.CreateCommand())
+                    //{
+                    //    cmd.CommandText = $"select * from {tableSchema}.{tableName}";
+                    //    cnn.Open();
 
-                        var t = new DataTable();
-                        t.Load(cmd.ExecuteReader());
-                        td.DataGrid.ApplyDataTale(t);
-                    }
+                    //    //var t = new DataTable();
+                    //    //t.Load(cmd.ExecuteReader());
+                    //    //td.DataGrid.ApplyDataTale(t);
+
+                       
+                        
+                    //}
 
                     
                 }

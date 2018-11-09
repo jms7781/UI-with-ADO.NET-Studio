@@ -46,6 +46,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Extensions.cs" />
+    <Compile Include="List Compare UI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List Compare UI.Designer.cs">
+      <DependentUpon>List Compare UI.cs</DependentUpon>
+    </Compile>
     <Compile Include="NativeListView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -66,6 +72,12 @@
     <Compile Include="SearchDataGrid.Designer.cs">
       <DependentUpon>SearchDataGrid.cs</DependentUpon>
     </Compile>
+    <Compile Include="SearchDataGridDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchDataGridDialog.Designer.cs">
+      <DependentUpon>SearchDataGridDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="SearchListView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -74,11 +86,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="List Compare UI.resx">
+      <DependentUpon>List Compare UI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProgressUI.resx">
       <DependentUpon>ProgressUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchDataGrid.resx">
       <DependentUpon>SearchDataGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchDataGridDialog.resx">
+      <DependentUpon>SearchDataGridDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchListView.resx">
       <DependentUpon>SearchListView.cs</DependentUpon>
