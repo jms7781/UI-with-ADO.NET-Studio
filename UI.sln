@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{45BE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO.NET Studio", "ADO.NET Studio\ADO.NET Studio.csproj", "{BA01475A-FAB6-409B-86E9-8C7976B6337C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSIS", "SSIS\SSIS.csproj", "{E5FAE598-74D3-4342-B499-56F781AAD61E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BA01475A-FAB6-409B-86E9-8C7976B6337C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA01475A-FAB6-409B-86E9-8C7976B6337C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA01475A-FAB6-409B-86E9-8C7976B6337C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5FAE598-74D3-4342-B499-56F781AAD61E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5FAE598-74D3-4342-B499-56F781AAD61E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5FAE598-74D3-4342-B499-56F781AAD61E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5FAE598-74D3-4342-B499-56F781AAD61E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

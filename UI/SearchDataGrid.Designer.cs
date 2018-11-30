@@ -174,7 +174,7 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(103, 19);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(103, 22);
             this.toolStripDropDownButton1.Text = "Resize Columns";
             this.toolStripDropDownButton1.Visible = false;
             // 
@@ -183,42 +183,49 @@
             this.columnHeaderToolStripMenuItem.Name = "columnHeaderToolStripMenuItem";
             this.columnHeaderToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.columnHeaderToolStripMenuItem.Text = "Column Header";
+            this.columnHeaderToolStripMenuItem.Click += new System.EventHandler(this.columnHeaderToolStripMenuItem_Click);
             // 
             // allCellsExceptHeaderToolStripMenuItem
             // 
             this.allCellsExceptHeaderToolStripMenuItem.Name = "allCellsExceptHeaderToolStripMenuItem";
             this.allCellsExceptHeaderToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.allCellsExceptHeaderToolStripMenuItem.Text = "All Cells Except Header";
+            this.allCellsExceptHeaderToolStripMenuItem.Click += new System.EventHandler(this.allCellsExceptHeaderToolStripMenuItem_Click);
             // 
             // allCellsToolStripMenuItem
             // 
             this.allCellsToolStripMenuItem.Name = "allCellsToolStripMenuItem";
             this.allCellsToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.allCellsToolStripMenuItem.Text = "All Cells";
+            this.allCellsToolStripMenuItem.Click += new System.EventHandler(this.allCellsToolStripMenuItem_Click);
             // 
             // displayedCellsExceptHeaderToolStripMenuItem
             // 
             this.displayedCellsExceptHeaderToolStripMenuItem.Name = "displayedCellsExceptHeaderToolStripMenuItem";
             this.displayedCellsExceptHeaderToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.displayedCellsExceptHeaderToolStripMenuItem.Text = "Displayed Cells Except Header";
+            this.displayedCellsExceptHeaderToolStripMenuItem.Click += new System.EventHandler(this.displayedCellsExceptHeaderToolStripMenuItem_Click);
             // 
             // displayedCellsToolStripMenuItem
             // 
             this.displayedCellsToolStripMenuItem.Name = "displayedCellsToolStripMenuItem";
             this.displayedCellsToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.displayedCellsToolStripMenuItem.Text = "Displayed Cells";
+            this.displayedCellsToolStripMenuItem.Click += new System.EventHandler(this.displayedCellsToolStripMenuItem_Click);
             // 
             // fillToolStripMenuItem
             // 
             this.fillToolStripMenuItem.Name = "fillToolStripMenuItem";
             this.fillToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.fillToolStripMenuItem.Text = "Fill";
+            this.fillToolStripMenuItem.Click += new System.EventHandler(this.fillToolStripMenuItem_Click);
             // 
             // noneToolStripMenuItem
             // 
             this.noneToolStripMenuItem.Name = "noneToolStripMenuItem";
             this.noneToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.noneToolStripMenuItem.Text = "None";
+            this.noneToolStripMenuItem.Click += new System.EventHandler(this.noneToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 

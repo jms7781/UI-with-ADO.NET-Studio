@@ -87,7 +87,7 @@ namespace UI
             }
             set
             {
-                var sql = value.Trim();
+                var sql = value?.Trim();
 
                 if (sql == complexFilterString)
                     return;
@@ -371,6 +371,41 @@ namespace UI
             f.Action = (s) => s.SortCriteria = f.DialogText.Text;
 
             f.Show(this);
+        }
+
+        private void columnHeaderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataGrid.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.ColumnHeader);
+        }
+
+        private void allCellsExceptHeaderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataGrid.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+        }
+
+        private void allCellsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataGrid.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+        }
+
+        private void displayedCellsExceptHeaderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataGrid.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader);
+        }
+
+        private void displayedCellsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataGrid.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.DisplayedCells);
+        }
+
+        private void fillToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataGrid.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.Fill);
+        }
+
+        private void noneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataGrid.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.None);
         }
     }
 }
